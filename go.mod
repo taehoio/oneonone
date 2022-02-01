@@ -26,6 +26,8 @@ require (
 	github.com/google/pprof v0.0.0-20211214055906-6f57359322fd // indirect
 	github.com/googleapis/gax-go/v2 v2.1.1 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.2 // indirect
+	github.com/sony/sonyflake v1.0.0 // indirect
+	github.com/xissy/kubeflake v0.0.0-20220101065740-c98e596c8e7f // indirect
 	go.opencensus.io v0.23.0 // indirect
 	go.opentelemetry.io/otel/trace v1.3.0 // indirect
 	golang.org/x/net v0.0.0-20210716203947-853a461950ff // indirect
@@ -42,6 +44,7 @@ require (
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace v1.0.0
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
+	github.com/taehoio/ddl v0.0.0-20220201103421-677e71442192
 	github.com/taehoio/idl v0.0.0-20220201000256-978e17695a13
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.28.0
 	golang.org/x/sys v0.0.0-20211210111614-af8b64212486 // indirect
