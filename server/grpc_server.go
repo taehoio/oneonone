@@ -20,6 +20,7 @@ import (
 
 	oneononev1 "github.com/taehoio/idl/gen/go/taehoio/idl/services/oneonone/v1"
 	"github.com/taehoio/oneonone/config"
+	"github.com/taehoio/oneonone/server/handler"
 )
 
 type OneononeServiceServer struct {
@@ -70,7 +71,7 @@ func (s *OneononeServiceServer) HealthCheck(ctx context.Context, req *oneononev1
 }
 
 func (s *OneononeServiceServer) ListCategories(ctx context.Context, req *oneononev1.ListCategoriesRequest) (*oneononev1.ListCategoriesResponse, error) {
-	return nil, status.Error(codes.Unimplemented, "not implemented")
+	return handler.ListCategories(s.db)(ctx, req)
 }
 
 func (s *OneononeServiceServer) ListQuestionsByCategoryId(ctx context.Context, req *oneononev1.ListQuestionsByCategoryIdRequest) (*oneononev1.ListQuestionsByCategoryIdResponse, error) {
