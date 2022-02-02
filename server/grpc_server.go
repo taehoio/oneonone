@@ -13,10 +13,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/keepalive"
 	"google.golang.org/grpc/reflection"
-	"google.golang.org/grpc/status"
 
 	oneononeddlv1 "github.com/taehoio/ddl/gen/go/taehoio/ddl/services/oneonone/v1"
 	oneononev1 "github.com/taehoio/idl/gen/go/taehoio/idl/services/oneonone/v1"
@@ -79,12 +77,21 @@ func (s *OneononeServiceServer) ListQuestionsByCategoryId(ctx context.Context, r
 	return handler.ListQuestionsByCategoryId(s.db, &oneononeddlv1.CategoryQuestion{}, &oneononeddlv1.Question{})(ctx, req)
 }
 
-func (s *OneononeServiceServer) ListQuestiGetRandomQuestiononsByCategoryId(ctx context.Context, req *oneononev1.GetRandomQuestionRequest) (*oneononev1.GetRandomQuestionResponse, error) {
-	return nil, status.Error(codes.Unimplemented, "not implemented")
+func (s *OneononeServiceServer) GetRandomQuestion(ctx context.Context, req *oneononev1.GetRandomQuestionRequest) (*oneononev1.GetRandomQuestionResponse, error) {
+	return handler.GetRandomQuestion(
+		s.db,
+		&oneononeddlv1.Category{},
+		&oneononeddlv1.CategoryQuestion{},
+		&oneononeddlv1.Question{},
+	)(ctx, req)
 }
 
 func (s *OneononeServiceServer) GetRandomQuestionByCategoryId(ctx context.Context, req *oneononev1.GetRandomQuestionByCategoryIdRequest) (*oneononev1.GetRandomQuestionByCategoryIdResponse, error) {
-	return nil, status.Error(codes.Unimplemented, "not implemented")
+	return handler.GetRandomQuestionByCategoryId(
+		s.db,
+		&oneononeddlv1.CategoryQuestion{},
+		&oneononeddlv1.Question{},
+	)(ctx, req)
 }
 
 func NewGRPCServer(cfg config.Config) (*grpc.Server, error) {
