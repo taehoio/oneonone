@@ -18,6 +18,7 @@ import (
 	"google.golang.org/grpc/reflection"
 	"google.golang.org/grpc/status"
 
+	oneononeddlv1 "github.com/taehoio/ddl/gen/go/taehoio/ddl/services/oneonone/v1"
 	oneononev1 "github.com/taehoio/idl/gen/go/taehoio/idl/services/oneonone/v1"
 	"github.com/taehoio/oneonone/config"
 	"github.com/taehoio/oneonone/server/handler"
@@ -71,11 +72,11 @@ func (s *OneononeServiceServer) HealthCheck(ctx context.Context, req *oneononev1
 }
 
 func (s *OneononeServiceServer) ListCategories(ctx context.Context, req *oneononev1.ListCategoriesRequest) (*oneononev1.ListCategoriesResponse, error) {
-	return handler.ListCategories(s.db)(ctx, req)
+	return handler.ListCategories(s.db, &oneononeddlv1.Category{})(ctx, req)
 }
 
 func (s *OneononeServiceServer) ListQuestionsByCategoryId(ctx context.Context, req *oneononev1.ListQuestionsByCategoryIdRequest) (*oneononev1.ListQuestionsByCategoryIdResponse, error) {
-	return handler.ListQuestionsByCategoryId(s.db)(ctx, req)
+	return handler.ListQuestionsByCategoryId(s.db, &oneononeddlv1.CategoryQuestion{}, &oneononeddlv1.Question{})(ctx, req)
 }
 
 func (s *OneononeServiceServer) ListQuestiGetRandomQuestiononsByCategoryId(ctx context.Context, req *oneononev1.GetRandomQuestionRequest) (*oneononev1.GetRandomQuestionResponse, error) {
