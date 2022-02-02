@@ -75,7 +75,7 @@ func (s *OneononeServiceServer) ListCategories(ctx context.Context, req *oneonon
 }
 
 func (s *OneononeServiceServer) ListQuestionsByCategoryId(ctx context.Context, req *oneononev1.ListQuestionsByCategoryIdRequest) (*oneononev1.ListQuestionsByCategoryIdResponse, error) {
-	return nil, status.Error(codes.Unimplemented, "not implemented")
+	return handler.ListQuestionsByCategoryId(s.db)(ctx, req)
 }
 
 func (s *OneononeServiceServer) ListQuestiGetRandomQuestiononsByCategoryId(ctx context.Context, req *oneononev1.GetRandomQuestionRequest) (*oneononev1.GetRandomQuestionResponse, error) {
