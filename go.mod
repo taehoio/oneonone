@@ -5,8 +5,8 @@ go 1.17
 require (
 	github.com/sirupsen/logrus v1.8.1
 	go.opentelemetry.io/otel v1.3.0
-	go.opentelemetry.io/otel/sdk v1.0.1
-	google.golang.org/grpc v1.43.0
+	go.opentelemetry.io/otel/sdk v1.3.0
+	google.golang.org/grpc v1.44.0
 )
 
 require (
@@ -45,7 +45,7 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/taehoio/ddl v0.0.0-20220201103421-677e71442192
-	github.com/taehoio/idl v0.0.0-20220201000256-978e17695a13
+	github.com/taehoio/idl v0.0.0-20220201121418-ecc2e887901c
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.28.0
 	golang.org/x/sys v0.0.0-20211210111614-af8b64212486 // indirect
 )
