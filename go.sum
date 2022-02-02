@@ -240,8 +240,8 @@ github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5Cc
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/taehoio/ddl v0.0.0-20220202070313-55e604cb2551 h1:eFh4IhGR4vO9SWdnTlM0GG3HXevdWbfDvA2VAs5sbvA=
 github.com/taehoio/ddl v0.0.0-20220202070313-55e604cb2551/go.mod h1:f1wJZ0YSojMC+50lsEePXdpiM76wk7SUxuQ48OfDpjU=
-github.com/taehoio/idl v0.0.0-20220201121418-ecc2e887901c h1:sl9sfJfrBwt79fnJmlBlOOSpO/V35qbV9RCw3tIdJJI=
-github.com/taehoio/idl v0.0.0-20220201121418-ecc2e887901c/go.mod h1:bIB2TsURu08iiRq8GjSJmhP5WVWqIPzMXdLmAlDaj6Y=
+github.com/taehoio/idl v0.0.0-20220202105737-36762fbeeea7 h1:3vAhr9f8V8sAHAH2y2PfjmLsN1G2Pu301ASt/vewY/I=
+github.com/taehoio/idl v0.0.0-20220202105737-36762fbeeea7/go.mod h1:bIB2TsURu08iiRq8GjSJmhP5WVWqIPzMXdLmAlDaj6Y=
 github.com/xissy/kubeflake v0.0.0-20220101065740-c98e596c8e7f h1:saxOLc0kCUsbyKWx+5IzzacPL/Fl9PPFj8HHW5QlBOM=
 github.com/xissy/kubeflake v0.0.0-20220101065740-c98e596c8e7f/go.mod h1:tJyWqnqxCjLdKQ3IoiedhFJTqE2dI7kB+3e1KqKr8Ks=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=

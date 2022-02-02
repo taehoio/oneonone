@@ -50,7 +50,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/stretchr/testify v1.7.0
 	github.com/taehoio/ddl v0.0.0-20220202070313-55e604cb2551
-	github.com/taehoio/idl v0.0.0-20220201121418-ecc2e887901c
+	github.com/taehoio/idl v0.0.0-20220202105737-36762fbeeea7
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.28.0
 	golang.org/x/sys v0.0.0-20211210111614-af8b64212486 // indirect
 )

@@ -77,6 +77,10 @@ func (s *OneononeServiceServer) ListQuestionsByCategoryId(ctx context.Context, r
 	return handler.ListQuestionsByCategoryId(s.db, &oneononeddlv1.CategoryQuestion{}, &oneononeddlv1.Question{})(ctx, req)
 }
 
+func (s *OneononeServiceServer) GetQuestion(ctx context.Context, req *oneononev1.GetQuestionRequest) (*oneononev1.GetQuestionResponse, error) {
+	return handler.GetQuestion(s.db, &oneononeddlv1.Question{})(ctx, req)
+}
+
 func (s *OneononeServiceServer) GetRandomQuestion(ctx context.Context, req *oneononev1.GetRandomQuestionRequest) (*oneononev1.GetRandomQuestionResponse, error) {
 	return handler.GetRandomQuestion(
 		s.db,
