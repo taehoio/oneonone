@@ -12,6 +12,7 @@
 * [https://api.taeho.io/oneonone/v1/categories/0/questions](https://api.taeho.io/oneonone/v1/categories/0/questions)
 * [https://api.taeho.io/oneonone/v1/categories/1/questions/random](https://api.taeho.io/oneonone/v1/categories/1/questions/random)
 * [https://api.taeho.io/oneonone/v1/questions/random](https://api.taeho.io/oneonone/v1/questions/random)
+* [https://api.taeho.io/oneonone/v1/questions/600](https://api.taeho.io/oneonone/v1/questions/600)
 
 ## Data models
 
