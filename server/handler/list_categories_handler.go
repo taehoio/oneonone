@@ -11,10 +11,9 @@ import (
 
 type ListCategoriesHandlerFunc func(ctx context.Context, req *oneononev1.ListCategoriesRequest) (*oneononev1.ListCategoriesResponse, error)
 
-func ListCategories(db *sql.DB) ListCategoriesHandlerFunc {
+func ListCategories(db *sql.DB, cr oneononeddlv1.CategoryRecorder) ListCategoriesHandlerFunc {
 	return func(ctx context.Context, req *oneononev1.ListCategoriesRequest) (*oneononev1.ListCategoriesResponse, error) {
-		cm := &oneononeddlv1.Category{}
-		ddlCategories, err := cm.List(db, nil, true, 100)
+		ddlCategories, err := cr.List(db, nil, true, 100)
 		if err != nil {
 			return nil, err
 		}

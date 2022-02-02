@@ -11,10 +11,13 @@ import (
 
 type ListQuestionsByCategoryIdHandlerFunc func(ctx context.Context, req *oneononev1.ListQuestionsByCategoryIdRequest) (*oneononev1.ListQuestionsByCategoryIdResponse, error)
 
-func ListQuestionsByCategoryId(db *sql.DB) ListQuestionsByCategoryIdHandlerFunc {
+func ListQuestionsByCategoryId(
+	db *sql.DB,
+	cqr oneononeddlv1.CategoryQuestionRecorder,
+	qr oneononeddlv1.QuestionRecorder,
+) ListQuestionsByCategoryIdHandlerFunc {
 	return func(ctx context.Context, req *oneononev1.ListQuestionsByCategoryIdRequest) (*oneononev1.ListQuestionsByCategoryIdResponse, error) {
-		cqm := &oneononeddlv1.CategoryQuestion{}
-		ddlCategoryQuestions, err := cqm.FindByCategoryId(db, req.GetCategoryId())
+		ddlCategoryQuestions, err := cqr.FindByCategoryId(db, req.GetCategoryId())
 		if err != nil {
 			return nil, err
 		}
@@ -24,8 +27,7 @@ func ListQuestionsByCategoryId(db *sql.DB) ListQuestionsByCategoryIdHandlerFunc 
 			questionIDs = append(questionIDs, cq.QuestionId)
 		}
 
-		qm := &oneononeddlv1.Question{}
-		ddlQustions, err := qm.FindByIDs(db, questionIDs)
+		ddlQustions, err := qr.FindByIDs(db, questionIDs)
 		if err != nil {
 			return nil, err
 		}
